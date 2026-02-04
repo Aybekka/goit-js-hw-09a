@@ -1,23 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Vite Proje Ödevi</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <div class="container">
+      <header>
+        <h1>9.Kod modülerliği ve bundler Vite</h1>
+        <p>Lütfen görüntülemek istediğiniz görevi seçin:</p>
+      </header>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
+      <nav class="navigation">
+        <ul class="task-list">
+          <li class="task-item">
+            <a href="01-gallery.html" class="task-link">
+              <span class="task-number">Görev 1</span>
+              <span class="task-name">Resim Galerisi</span>
+            </a>
+          </li>
+          <li class="task-item">
+            <a href="02-form.html" class="task-link">
+              <span class="task-number">Görev 2</span>
+              <span class="task-name">Geri Bildirim Formu</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>
