@@ -17,6 +17,8 @@ form.addEventListener("input", (event) => {
 });
 
 form.addEventListener("submit", (event) => {
+  
+  event.preventDefault();
 
   const email = form.elements.email.value.trim();
   const message = form.elements.message.value.trim();

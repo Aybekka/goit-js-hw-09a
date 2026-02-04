@@ -1,16 +1,17 @@
 import { defineConfig } from 'vite';
-import { glob } from 'glob';
-import injectHTML from 'vite-plugin-html-inject';
-import FullReload from 'vite-plugin-full-reload';
-import SortCss from 'postcss-sort-media-queries';
+import { resolve } from 'path';
+
 export default defineConfig({
-  base: '/goit-js-hw-09/', 
+  base: '/goit-js-hw-09a/',
   root: 'src',
   build: {
     outDir: '../dist',
-    emptyOutDir: true,
-  },
-  define: {
-    global: 'window',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'src/index.html'),
+        gallery: resolve(__dirname, 'src/01-gallery.html'),
+        form: resolve(__dirname, 'src/02-form.html'),
+      },
+    },
   },
 });
