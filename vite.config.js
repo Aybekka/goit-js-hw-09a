@@ -4,15 +4,12 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 export default defineConfig({
-  // ÖNEMLİ: Buradaki repo-adi kısmını GitHub'daki klasör isminle değiştir!
-  // Örneğin: base: '/goit-js-hw-09/'
-  base: '/repo-adi/', 
+  base: '/goit-js-hw-09/', 
   root: 'src',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
   },
-  // global hatasını önlemek için (Gerekirse)
   define: {
     global: 'window',
   },
